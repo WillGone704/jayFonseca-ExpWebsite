@@ -1,11 +1,11 @@
 @font-face {
     font-family: OpenSans;
-    src: url('../../assets/fonts/open-sans/OpenSans-Regular.ttf');
+    src: url('../assets/fonts/open-sans/OpenSans-Regular.ttf');
 }
 
 @font-face {
     font-family: OpenSansBold;
-    src: url('../../assets/fonts/open-sans/OpenSans-Semibold.ttf');
+    src: url('../assets/fonts/open-sans/OpenSans-Semibold.ttf');
 }
 
 *{margin: 0px;}
@@ -87,7 +87,7 @@ nav figure{
 /* Header Blog */
 header{
     /* The image used */
-    background-image: url("../../assets/jayfonseca-cover-image2.jpeg");
+    background-image: url("../assets/jayfonseca-cover-image2.jpeg");
 
     /* Set a specific height */
     min-height: 600px; 
@@ -98,6 +98,9 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.fas{
+    line-height: 0;
+}
 
 #down-btn{
     color: rgb(173, 170, 170);
@@ -106,6 +109,17 @@ header{
     left: 44.1em;
     width: 50px;
     bottom: -19em;
+}
+#spacer{
+    background-color:transparent;
+    height: 12px;
+}
+#down-btn:hover{
+    cursor: pointer;
+}
+
+#down-btn i{
+    animation: down 1s 2s ease-in-out infinite;
 }
 
 #up-btn{
@@ -123,12 +137,13 @@ header{
     top: 12em;
     margin-left: 10rem;
     max-width: 510px;
+    height: 200px;
     background-color: rgb(228, 228, 228);
     border-radius: 5px;
     padding: 15px;
     text-align: center;
 }
-#newsletter div{
+#newsletter div:first-child{
     background-color: rgb(44, 76, 112);
     color: white;
     padding: 10px;
@@ -136,7 +151,7 @@ header{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-#newsletter p,input,button{
+#newsletter p,input{
     margin: auto;
 }
 
@@ -160,26 +175,26 @@ header{
     border: 2px solid rgb(44, 76, 112)
 }
 
-#newsletter button{
-    border:none;
+#newsletter a{
     background-color: rgb(5, 206, 5);
     color: white;
     padding: 10px 10px;
     border-radius: 2px;
     font-weight: 700;
+    text-decoration: none;
 }
 
-#newsletter button:hover{
+#newsletter a:hover{
     background-color: rgb(47, 223, 47);
     transition: 0.2s;
 }
 
-#newsletter button:active{
+#newsletter a:active{
     background-color: rgb(45, 163, 45);
     transition: 0.2s;
 }
 
-#newsletter input,button,p{
+#newsletter input,a,p{
     margin-top: 8px;
     margin-bottom: 5px;
 }
@@ -262,6 +277,19 @@ footer div{
     bottom: 100%;
 }
 
+@keyframes down{
+    0%{
+        transform: translateY(0px)
+    }
+    50%{
+        color: rgb(247, 247, 247);
+        transform: translateY(20px)
+    }
+    100%{
+        color: rgb(173, 170, 170);
+        transform: translateY(0px)
+    }
+}
 
 @media screen and (max-width: 778px){
     nav figure img{
